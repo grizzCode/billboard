@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# Artist.create(name: 'Metallica')
+# Artist.create(name: 'AFI')
+# Artist.create(name: 'TOOL')
+# Artist.create(name: 'Teenage Bottlerockets')
+# Artist.create(name: 'Screeching Weasle')
+# Artist.create(name: 'System of a Down')
