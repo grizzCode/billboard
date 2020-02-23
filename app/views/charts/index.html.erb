@@ -1,2 +1,7 @@
-<h1>Charts#index</h1>
-<p>Find me in app/views/charts/index.html.erb</p>
+<h2>BILLBOARD CHARTS</h2>
+<%= link_to "New Chart", new_chart_path %>
+<% @charts.each do |chart|%>
+ <h4><%= link_to "#{chart.name}", chart_path(chart) %></h4>
+ <%= link_to "Edit", edit_chart_path(chart) %>
+ <%= link_to "Delete", chart_path(chart),method: :delete %>
+<% end %>

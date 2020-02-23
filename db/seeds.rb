@@ -11,3 +11,8 @@
 # Artist.create(name: 'Teenage Bottlerockets')
 # Artist.create(name: 'Screeching Weasle')
 # Artist.create(name: 'System of a Down')
+
+# Chart.create(name: 'Progressive House')
+# Chart.create(name: 'Rock')
+# Chart.create(name: 'New Retro')
+# Chart.create(name: 'Drum & Bass')
