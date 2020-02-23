@@ -1,6 +1,8 @@
 <h2><%= @artist.name.upcase %></h2>
 <br>
-
+<%= link_to "New Song", new_artist_song_path(@artist) %>
+<%= link_to "Back", root_path %>
 <p>Song List:</p>
-
-
+<% @artist.songs.each do |song| %>
+<%= link_to "#{song.name}", artist_song_path(@artist, song) %><br>
+<% end %>
