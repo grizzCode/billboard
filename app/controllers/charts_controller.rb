@@ -6,10 +6,10 @@ class ChartsController < ApplicationController
   
   def show
     @chart = Chart.find(params[:id])
-    # @songs = @chart.songs
+    @songs = @chart.songs
   end
 
-  def new_movie
+  def new_song
     @chart = Chart.find(params[:id])
     @songs = Song.all.where(chart_id: nil)
   end
@@ -21,8 +21,6 @@ class ChartsController < ApplicationController
   end
 
   def remove_song
-    # delete 'remove_theater_movie/:id/:movie_id', to: 'theaters#remove_movie', as: 'remove_theater_movie'
-    # remove the theater_id so it is no longer associated
     @chart = Chart.find(params[:id])
     Song.find(params[:song_id]).update(chart_id: nil)
     # redirect_to theater_path(@theater)

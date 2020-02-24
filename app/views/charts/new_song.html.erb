@@ -1,0 +1,7 @@
+<h1>Charts#new</h1>
+	<% @songs.each do |song| %>
+	  <li>
+	    <%= link_to song.name, add_chart_song_path(@chart, song), method: :post %>
+	  </li>
+	  <hr />
+	<% end %>

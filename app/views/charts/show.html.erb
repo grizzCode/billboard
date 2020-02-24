@@ -1,2 +1,9 @@
-<h1>Charts#show</h1>
-<p>Find me in app/views/charts/show.html.erb</p>
+<h3>Billboard Chart - <%= @chart.name %></h3>
+<% if @songs.any? %>
+  <% @songs.each do |song| %>
+    <p><%= song.name %></p>
+     <%= link_to 'Remove From Theater', remove_chart_song_path(@chart, song), method: :delete %>
+  <% end %>
+<% end %>
+
+<%= link_to 'Add Song', new_chart_song_path(@chart) %> |
