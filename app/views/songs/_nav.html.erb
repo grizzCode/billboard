@@ -1,0 +1,6 @@
+<h3><%= @song.name %></h3>
+<hr>
+<%= link_to "Edit Song", edit_artist_song_path(@artist, @song) %>
+<%= link_to "Delete Song", artist_song_path(@artist, @song), method: :delete  %>
+<%= link_to "Back", artist_path(@artist, @song)%>
+<hr>
