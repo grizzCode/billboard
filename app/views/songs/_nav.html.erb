@@ -1,6 +1,6 @@
 <h3><%= @song.name.upcase %></h3>
 
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <a class="navbar-brand"><%= link_to "Edit Song", edit_artist_song_path(@artist, @song) %></a>
   <a class="navbar-brand"><%= link_to "Delete Song", artist_song_path(@artist, @song), method: :delete  %></a>
   <a class="navbar-brand"><%= link_to "Back", artist_path(@artist, @song)%></a>
