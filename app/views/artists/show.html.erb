@@ -1,8 +1,11 @@
 <h2><%= @artist.name.upcase %></h2>
-<br>
-<%= link_to "New Song", new_artist_song_path(@artist) %>
-<%= link_to "Back", root_path %>
-<p>Song List:</p>
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand"><%= link_to "New Song", new_artist_song_path(@artist) %></a>
+  <a class="navbar-brand"><%= link_to "Back", root_path %></a>
+</nav>
+
+
+<h4>SONG LIST:</h4>
 <% @artist.songs.each do |song| %>
 <%= link_to "#{song.name}", artist_song_path(@artist, song) %><br>
 <% end %>

@@ -1,7 +1,10 @@
+<div class="nav">
 <h3><%= @artist.id == nil ? "New Artist" : "Edit Artist" %></h3>
+</div>
 <%= form_for [@artist] do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <br>
   <%= f.submit %>
+
 <% end %>
