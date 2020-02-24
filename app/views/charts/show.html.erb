@@ -1,4 +1,4 @@
-<h3>Billboard Chart - <%= @chart.name %></h3>
+<h2>BILLBOARD CHART - <%= @chart.name.upcase %></h2>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <a class="navbar-brand"><%= link_to 'Add Song', new_chart_song_path(@chart) %></a>
   <a class="navbar-brand"><%= link_to "Back", root_path %></a>
