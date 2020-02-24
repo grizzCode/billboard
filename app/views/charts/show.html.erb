@@ -4,19 +4,14 @@
   <a class="navbar-brand"><%= link_to "Back", root_path %></a>
 </nav>
 
-
-
 <% if @songs.any? %>
   <% @songs.each do |song| %>
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title"><%= link_to "#{song.name} by #{song.artist.name}", artist_song_path(song.artist, song) %></h5>
-     <a href="#" class="card-link"><%= link_to 'Remove From Chart', remove_chart_song_path(@chart, song), method: :delete %></a>
-  </div>
-</div>
-    
-     
-  
+    <div class="card" style="width: 99%;">
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to "#{song.name} by #{song.artist.name}", artist_song_path(song.artist, song) %></h5>
+        <a href="#" class="card-link"><%= link_to 'Remove From Chart', remove_chart_song_path(@chart, song), method: :delete %></a>
+      </div>
+    </div>
   <% end %>
 <% end %>
 
