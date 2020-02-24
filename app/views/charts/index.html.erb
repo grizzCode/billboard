@@ -1,5 +1,7 @@
 <h2>BILLBOARD CHARTS</h2>
-
+<hr>
+<%= render 'nav' %>
+<hr>
 <% @charts.each do |chart|%>
  <h4><%= link_to "#{chart.name}", chart_path(chart) %></h4>
 <% end %>
